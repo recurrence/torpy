@@ -44,7 +44,7 @@ class TorCacheStorage:
 
 
 class TorCacheDirStorage(TorCacheStorage):
-    def __init__(self, base_dir=None):
+    def __init__(self, base_dir='/tmp'):
         self._base_dir = base_dir or user_data_dir('torpy')
         if not os.path.isdir(self._base_dir):
             os.makedirs(self._base_dir)
